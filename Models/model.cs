@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Components.Server.Circuits;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.Identity.Client;
@@ -83,6 +84,11 @@ public class AuthorRepository
 
         return options.Value.DefaultPageSize != 0 ? 
             await context.Authors.Take(options.Value.DefaultPageSize).ToListAsync() : await context.Authors.ToListAsync();
+    }
+
+    public async Task<Author> TryGetById(int key)
+    {
+        return await context.Authors?.FirstOrDefaultAsync(x => x.AuthorId == key);
     }
 }
 

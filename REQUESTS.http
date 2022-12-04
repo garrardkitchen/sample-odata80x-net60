@@ -1,5 +1,5 @@
 ﻿@hostname = localhost
-@port = 3692
+@port = 3693
 @host = {{hostname}}:{{port}}
 @contentType = application/json
 
@@ -13,3 +13,11 @@ Content-Type: {{contentType}}
 {
     "Username": "edward.kitchen"    
 }
+
+###
+
+GET http://{{host}}/odata/author?$select=Username&filter='AuthorId gt 1' 
+
+###
+
+GET http://{{host}}/odata/author(1)?$select=Username
