@@ -1,0 +1,15 @@
+﻿@hostname = localhost
+@port = 3692
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+GET https://{{host}}/author HTTP/1.1
+
+###
+
+POST https://{{host}}/author HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "Username": "edward.kitchen"    
+}
