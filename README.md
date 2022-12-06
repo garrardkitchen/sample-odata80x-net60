@@ -6,7 +6,7 @@ To explorer the latest and greatest of Entity Framework 7.0, OData 8.0 and .NET 
 
 This example shows both Convention and Attribute routing:
 
-![](img\2022-12-06-08-27-53.png)
+![](img/2022-12-06-08-27-53.png)
 
 # References
 
