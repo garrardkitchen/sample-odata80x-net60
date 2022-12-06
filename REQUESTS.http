@@ -20,4 +20,8 @@ GET http://{{host}}/odata/author?$select=Username&filter='AuthorId gt 1'
 
 ###
 
-GET http://{{host}}/odata/author(1)?$select=Username
+GET http://{{host}}/odata/author(6)?$select=Username
+
+###
+
+GET http://{{host}}/odata/author?$select=Username,AuthorId&filter=AuthorId gt 1&orderby=AuthorId desc

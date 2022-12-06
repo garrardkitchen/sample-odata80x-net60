@@ -13,6 +13,7 @@ public class BloggingContext : DbContext
     public DbSet<Blog> Blogs { get; set; }
     public DbSet<Post> Posts { get; set; }
     public DbSet<Author> Authors { get; set; }
+    public DbSet<Approval> Approval { get; set; }
 
     public string DbPath { get; }
 
@@ -59,6 +60,18 @@ public class Author
     public string Username { get; set; }
 
     //public string Created { get; set; }
+}
+
+public class Approval
+{
+    public int ApprovalId { get; set; }
+
+    public int AuthorId { get; set; }
+
+    public int BlogId { get; set; }
+
+    public string Comment { get; set; }
+
 }
 
 public class AuthorRepository 
